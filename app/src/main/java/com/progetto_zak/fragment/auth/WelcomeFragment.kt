@@ -1,4 +1,4 @@
-package com.progetto_zak.home
+package com.progetto_zak.fragment.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import com.progetto_zak.databinding.FragmentWelcomeBinding
 import androidx.navigation.fragment.findNavController
 import com.progetto_zak.R
+import com.progetto_zak.viewmodel.WelcomeViewModel
 
 class WelcomeFragment : Fragment() {
 
@@ -27,6 +28,13 @@ class WelcomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val fromLogout = activity?.intent?.getBooleanExtra("fromLogout", false) ?: false
+
+        if (fromLogout) {
+            findNavController().navigate(R.id.action_welcomeFragment_to_authChoiceFragment)
+            return
+        }
 
         // Azione al click del bottone "Prosegui"
         binding.btnContinue.setOnClickListener {

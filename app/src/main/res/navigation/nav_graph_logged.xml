@@ -5,19 +5,18 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.progetto_zak.auth.LoginFragment"
-        android:label="Login" >
-
-        <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/homeFragment"
-        android:name="com.progetto_zak.home.HomeFragment"
+        android:name="com.progetto_zak.fragment.home.HomeFragment"
         android:label="Home" />
 
-    <!-- Aggiungi altri fragment navigabili dopo login -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.progetto_zak.fragment.home.ProfileFragment"
+        android:label="Profilo" />
+
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.progetto_zak.fragment.home.AppointmentsFragment"
+        android:label="Appuntamenti" />
+
 </navigation>

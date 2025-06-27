@@ -65,6 +65,15 @@ dependencies {
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation("com.google.firebase:firebase-analytics")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.5.4")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    implementation ("androidx.credentials:credentials:1.2.0-alpha01")
+    implementation ("com.google.android.libraries.identity.googleid:googleid:1.1.0")
+    implementation ("com.google.firebase:firebase-auth-ktx")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
 
 
 }

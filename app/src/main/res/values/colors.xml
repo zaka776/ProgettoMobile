@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="green">#4CAF50</color>
+    <color name="purple_500">#D127ED</color>
+    <color name="purple_700">#9C27B0</color>
+    <color name="teal_200">#03DAC5</color> <!-- un ciano acceso, chiaro -->
+    <color name="teal_700">#018786</color> <!-- una variante più scura e satura -->
+    <color name="white_70">#CED1D1</color> <!-- una variante più scura e satura -->
+    <color name="gray_200">#BBBFBF</color> <!-- una variante più scura e satura -->
+    <color name="gray_600">#424242</color>
+    <color name="red">#DE3B3B</color>
+
 </resources>

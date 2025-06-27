@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/welcomeTitle"
-        app:srcCompat="@drawable/maso" />
+        app:srcCompat="@drawable/barber" />
 
     <TextView
         android:id="@+id/welcomeMessage"

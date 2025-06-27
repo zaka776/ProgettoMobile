@@ -1,28 +1,30 @@
-package com.progetto_zak.auth
+package com.progetto_zak.fragment.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import com.progetto_zak.R
-import com.progetto_zak.databinding.FragmentRegistrationBinding
-import com.google.firebase.auth.FirebaseAuth
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.progetto_zak.databinding.FragmentLoginBinding
+import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.progetto_zak.R
+import com.progetto_zak.activity.HomeActivity
 
-class RegistrationFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private lateinit var auth: FirebaseAuth
-    private var _binding: FragmentRegistrationBinding? = null
+    private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         auth = FirebaseAuth.getInstance()
         return binding.root
     }
@@ -30,36 +32,34 @@ class RegistrationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Registrazione utente
-        binding.registerButton.setOnClickListener {
+        // Login
+        binding.loginButton.setOnClickListener {
             val email = binding.emailEditText.text.toString().trim()
             val password = binding.passwordEditText.text.toString().trim()
-            val confirmPassword = binding.confirmPasswordEditText.text.toString().trim()
 
-            if (email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+            if (email.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Compila tutti i campi", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            if (password != confirmPassword) {
-                Toast.makeText(requireContext(), "Le password non coincidono", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-
-            auth.createUserWithEmailAndPassword(email, password)
+            auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(requireContext(), "Registrazione completata", Toast.LENGTH_SHORT).show()
-                        findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
+                        Toast.makeText(requireContext(), "Accesso riuscito!", Toast.LENGTH_SHORT).show()
+
+                        // Passaggio a HomeActivity
+                        val intent = Intent(requireContext(), HomeActivity::class.java)
+                        startActivity(intent)
+                        requireActivity().finish()
                     } else {
                         Toast.makeText(requireContext(), "Errore: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                     }
                 }
         }
 
-        // Link per tornare al Login
-        binding.loginLink.setOnClickListener {
-            findNavController().navigate(R.id.action_registrationFragment_to_loginFragment)
+        // Vai a Registrazione
+        binding.registerText.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registrationFragment)
         }
     }
 

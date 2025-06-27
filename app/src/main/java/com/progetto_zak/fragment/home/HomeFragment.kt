@@ -1,4 +1,4 @@
-package com.progetto_zak.home
+package com.progetto_zak.fragment.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

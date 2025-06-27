@@ -1,4 +1,4 @@
-package com.progetto_zak.home
+package com.progetto_zak.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,7 +1,8 @@
-package com.progetto_zak
+package com.progetto_zak.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.progetto_zak.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
