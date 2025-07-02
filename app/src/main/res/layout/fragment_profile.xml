@@ -37,6 +37,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="Mario Rossi"
                 android:textColor="@color/white" />
 
             <TextView
@@ -45,6 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"
+                android:text="mario.rossi@example.com"
                 android:textColor="@color/white" />
         </LinearLayout>
 

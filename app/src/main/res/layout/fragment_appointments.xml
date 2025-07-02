@@ -12,6 +12,7 @@
         android:background="@color/white"
         app:elevation="0dp">
 
+        <!--
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -19,6 +20,7 @@
             app:title="Appuntamenti"
             app:titleTextColor="@color/black"
             app:navigationIcon="@drawable/ic_menu" />
+        -->
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
