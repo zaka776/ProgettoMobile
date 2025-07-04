@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_logged"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.progetto_zak.fragment.home.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.progetto_zak.fragment.home.ProfileFragment"
+        android:label="Profilo" />
+
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.progetto_zak.fragment.home.AppointmentsFragment"
+        android:label="Appuntamenti" />
+
+</navigation>

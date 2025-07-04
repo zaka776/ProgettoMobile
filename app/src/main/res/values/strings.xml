@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Barberz</string>
+    <string name="barber_image_desc">Immagine di un barbiere professionista</string>
+    <string name="version">Versione: 1.0.0</string>
+    <string name="auth_choice_title">Benvenuto nel Barber del fungo</string>
+    <string name="auth_choice_subtitle">Sei già registrato? Accedi</string>
+    <string name="welcome_title">Benvenuto nel Barber del fungo</string>
+    <string name="welcome_message">Ti sei registrato con successo!</string>
+    <string name="welcome_button">Vai alla home</string>
+    <string name="default_web_client_id">TUO_CLIENT_ID_OAUTH_2.0</string>
+</resources>
